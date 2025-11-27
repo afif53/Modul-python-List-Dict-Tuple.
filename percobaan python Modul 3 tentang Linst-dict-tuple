@@ -1,0 +1,74 @@
+# 1. Menggunakan Dictionary (Kamus)
+# Dictionary menyimpan pasangan kunci-nilai (key-value pairs)
+data_mahasiswa = {
+    "nama": "Muhammad Afif Rifai", # nama mahasiswa
+    "nim": "2411010016",         # nim mahasiswa
+    "jurusan": "Teknik Mekatronika", # jurusan
+    "ipk": 3.85
+}
+
+print("--- Data Dictionary (data_mahasiswa) ---")
+print(f"Nama: {data_mahasiswa['nama']}")
+print(f"NIM: {data_mahasiswa['nim']}")
+print(f"Jurusan: {data_mahasiswa['jurusan']}")
+
+# Mengubah nilai di dictionary
+data_mahasiswa['ipk'] = 3.90
+print(f"IPK Baru: {data_mahasiswa['ipk']}")
+
+print("-" * 30)
+
+# 2. Menggunakan List (Daftar)
+# List adalah koleksi item yang berurutan, dapat diubah (mutable).
+daftar_nilai = [85, 90, 78, 92, 88]
+
+print("--- Data List (daftar_nilai) ---")
+print(f"Daftar Nilai Awal: {daftar_nilai}")
+
+# Menambahkan elemen ke list
+daftar_nilai.append(95)
+print(f"Setelah ditambah (append): {daftar_nilai}")
+
+# Mengubah elemen di list
+daftar_nilai[2] = 80
+print(f"Setelah diubah (indeks 2): {daftar_nilai}")
+
+# Menghitung rata-rata nilai
+rata_rata = sum(daftar_nilai) / len(daftar_nilai)
+print(f"Rata-rata Nilai: {rata_rata:.2f}")
+
+print("-" * 30)
+
+# 3. Menggunakan Tuple
+# Tuple adalah koleksi item yang berurutan, tetapi tidak dapat diubah (immutable).
+koordinat_lokasi = (40.7128, -74.0060, "New York")
+
+print("--- Data Tuple (koordinat_lokasi) ---")
+print(f"Latitude: {koordinat_lokasi[0]}")
+print(f"Longitude: {koordinat_lokasi[1]}")
+print(f"Kota: {koordinat_lokasi[2]}")
+
+print("-" * 30)
+
+# 4. Contoh Kombinasi
+# List yang berisi tuple
+mata_kuliah = [
+    ("Pengantar Mekatronika", 3), # Diperbarui
+    ("Rangkaian Listrik", 4),     # Diperbarui
+    ("Pemrograman Dasar", 3)
+]
+
+print("--- Data Kombinasi (List of Tuples) ---")
+for nama_mk, sks in mata_kuliah:
+    print(f"Mata Kuliah: {nama_mk}, SKS: {sks}")
+
+# Dictionary yang berisi List sebagai salah satu nilainya
+projek_data = {
+    "judul": "Proyek Sistem Kontrol",
+    "anggota": ["Afif", "Dian", "Rizki"], # Diperbarui
+    "tenggat": "2026-06-15"
+}
+
+
+
+print(f"\nAnggota Proyek: {projek_data['anggota']}")
